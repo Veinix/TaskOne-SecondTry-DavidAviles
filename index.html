@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico?=TaskOne" type="image/x-icon">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <title>Task One - JavaScript HTML5 Task</title>
+</head>
+<body class="d-flex flex-column p-5 align-items-center mh-100">
+
+    <!-- Form with Inputs for imgage url, image title, and image description -->
+    <div class="container mb-5" id="form-container">
+        <div class="row">
+            <div class="col">
+                <form class="row g-3" id="theForm" novalidate>
+                    <div class="mb-0">
+                        <label for="imgTitleBox" class="form-label">Image title</label>
+                        <input type="text" class="form-control" id="imgTitleBox" placeholder=" Grandma's Birthday" default="abcd" required>
+                        <div class="invalid-feedback">
+                        Please provide a valid title, must not contain numbers and be at least three letters long.
+                        </div>                 
+                    </div>
+                    <div class="mb-1">
+                        <label for="imgUrlBox" class="form-label">Image URL</label>
+                        <input type="text" class="form-control" id="imgURLBox" placeholder=" https://placehold.co/500x500 ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="imgDescBox" class="form-label">Image description</label>
+                        <input type="text" class="form-control" id="imgDescBox" placeholder=" She turned 64 and we can't believe she dressed like that! I mean wh... ">
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary" id="addButton">Add to album</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+                
+        </div>
+        
+    </div>
+
+    <div class="container" >
+        <div class="row row-cols-3" id="albumContainer">
+            <!-- Start -->
+            
+            
+            
+
+            <!-- End -->
+        </div>
+    </div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
+    Launch demo modal
+  </button>
+  
+  <div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalLabel">Edit Description</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <textarea class="form-control" id="newDescriptionBox"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveEditDesc">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      
+</body>
+</html>

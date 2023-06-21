@@ -1,0 +1,56 @@
+
+#form-container {
+    width: 40%;
+    padding: 10px;
+    border: gray;
+    box-shadow: 0px 0px 10px 1px gray;
+    border-radius: 10px;
+}
+
+#album-container {
+    width: 70%;
+}
+
+.image-card {
+    width: 20rem;
+    height: 25rem;
+}
+
+img {
+    width: 100%;
+    max-height: 12rem;
+}
+
+p.card-text {
+    padding: 2px;
+    max-height: 10rem;   
+    overflow-y: scroll;   
+}
+
+.removeButton {
+    position: absolute;
+    top: 45px;
+    right: 13px;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    width: 2rem;
+    text-align: center;
+}
+
+img:hover ~ .removeButton {
+    opacity: 0.7;
+}
+
+.removeButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#newDescriptionBox {
+    height: 15rem;
+    overflow-wrap: normal;
+    overflow-y: auto;
+}
